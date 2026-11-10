@@ -28,6 +28,14 @@ header h1 {
   margin-bottom: 10px;
 }
 
+header {
+  margin-bottom: 20px;
+}
+
+#auth-container {
+  margin: 0 auto 30px;
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
@@ -70,64 +78,54 @@ section h3 {
   color: #0066cc;
 }
 
+.activity-card button,
+#logout-button {
+  margin-top: 8px;
+}
+
 .activity-card p {
   margin-bottom: 8px;
 }
 
-/* New styles for participants section */
-.participants-container {
+.roster {
   margin-top: 15px;
   padding-top: 12px;
   border-top: 1px dashed #ccc;
 }
 
-.participants-section h5 {
+.roster h5 {
   margin-bottom: 8px;
   color: #1a237e;
   font-size: 16px;
 }
 
-.participants-section ul {
-  list-style-type: none;
-  padding-left: 5px;
+.roster ul,
+#enrollments-list {
+  padding-left: 20px;
 }
 
-.participants-section ul li {
+.roster li,
+#enrollments-list li {
   padding: 4px 0;
-  position: relative;
+}
+
+.roster-register-form {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  gap: 8px;
+  margin-top: 12px;
 }
 
-/* Remove the bullet point pseudo-element */
-.participants-section ul li::before {
-  display: none;
+.roster-register-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
-.participant-email {
-  flex-grow: 1;
-  margin-right: 8px;
-}
-
-.delete-btn {
-  background: none;
-  border: none;
-  color: #c62828;
-  cursor: pointer;
-  font-size: 14px;
-  padding: 2px 5px;
-  transition: all 0.2s;
-  border-radius: 3px;
-}
-
-.delete-btn:hover {
-  background-color: #ffebee;
-}
-
-.participants-section p {
-  color: #777;
-  font-style: italic;
+#enrollments-list button {
+  margin-left: 12px;
 }
 
 .form-group {
@@ -192,9 +190,33 @@ button:hover {
   display: none;
 }
 
+.account-status {
+  margin: 8px 0;
+  font-weight: bold;
+}
+
+.enrollment-heading {
+  margin-top: 24px;
+}
+
 footer {
   text-align: center;
   margin-top: 30px;
   padding: 20px;
   color: #666;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
+
+  #enrollments-list button {
+    display: block;
+    margin: 8px 0;
+  }
+
+  .roster-register-form {
+    flex-direction: column;
+  }
 }
